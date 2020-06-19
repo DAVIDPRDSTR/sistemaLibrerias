@@ -25,7 +25,7 @@ if (trim($_POST['USER'])!='' && ($_POST['PASS'])!='') {
     
     if (@$rol!= null && @$est== 'A' ) {
         switch ($rol) {
-            case ("1"):echo  "<script>location.href='../inicio.php';</script>";
+            case ("1"):echo  "<script>location.href='../index.php';</script>";
                 break;
 
             case ("2"):echo  "<h1>Invitado</h1>";
