@@ -91,4 +91,3 @@ function limpiarSession() {
     unset($_SESSION['usuario']);
 }
 
-?>
