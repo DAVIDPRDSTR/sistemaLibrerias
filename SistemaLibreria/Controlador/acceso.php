@@ -1,7 +1,7 @@
 <?php
-
-include '../Datos/conexion.php';
 session_start();
+include '../Datos/conexion.php';
+
 
 $user = $_POST['usuario'];
 $pass = $_POST['clave'];
