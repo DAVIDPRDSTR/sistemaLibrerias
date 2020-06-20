@@ -47,13 +47,13 @@ session_start();
                              <form class="login100-form validate-form" action="/Controlador/acceso.php" method="POST">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Usuario es requerido">
 						<span class="label-input100"></span>
-                                                <input class="input100" type="text" name="usuario" id="Usuario" >
+                                                <input class="input100" type="text" name="usuario" id="usuario" >
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
 						<span class="label-input100"></span>
-                                                <input class="input100" type="password" name="clave" id="Password">
+                                                <input class="input100" type="password" name="clave" id="clave">
 						<span class="focus-input100"></span>
 					</div>
 
