@@ -38,26 +38,26 @@ if (validarUsuario($user, $pdo) == true) {
                     $querysql1->execute();
                     $mensaje2 = 'Lo sentimos, su usuario ha sido bloqueado';
                     echo "<script type='text/javascript'>alert('$mensaje2');</script>";
-                    header('refresh:0.2;url=../Login.php');
+                    header('refresh:0.2;url=../index.php');
                     limpiarSession();
                 } else {
-                    echo "<script type='text/javascript'>alert('$int intetnto, Usuario/Password Incorrecto');window.location= '../Login.php'</script>";
+                    echo "<script type='text/javascript'>alert('$int intetnto, Usuario/Password Incorrecto');window.location= '../index.php'</script>";
                 }
             } else {
                 $_SESSION['n'] = 1;
                 $_SESSION['usuario'] = $user;
-                echo "<script type='text/javascript'>alert('Usuario/Password Incorrecto');window.location= '../Login.php'</script>";
+                echo "<script type='text/javascript'>alert('Usuario/Password Incorrecto');window.location= '../index.php'</script>";
             }
         } else {
             $_SESSION['n'] = 1;
             $_SESSION['usuario'] = $user;
-            echo "<script type='text/javascript'>alert('Usuario/Password Incorrecto');window.location= '../Login.php'</script>";
+            echo "<script type='text/javascript'>alert('Usuario/Password Incorrecto');window.location= '../index.php'</script>";
         }
     }
 } elseif (validarEstado($user, $pdo) == true) {
-    echo "<script type='text/javascript'>alert('El estado del usuario esta inactivo');window.location= '../Login.php'</script>";
+    echo "<script type='text/javascript'>alert('El estado del usuario esta inactivo');window.location= '../index.php'</script>";
 } else {
-    echo "<script type='text/javascript'>alert('Usuario/Password no existen');window.location= '../Login.php'</script>";
+    echo "<script type='text/javascript'>alert('Usuario/Password no existen');window.location= '../index.php'</script>";
 }
 
 function validarUsuario($usu, $pdo2) {
