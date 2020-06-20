@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../Datos/conexion.php';
+include 'Datos/conexion.php';
 $usuario = $_SESSION['usuario'];
 if ($usuario == "") {
     header("Location:index.php");
@@ -22,10 +22,10 @@ foreach ($resultadoU as $resU) {
     <head>
         <title></title>
         <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/styles.css" />
-        <link rel="stylesheet" href="css/w3.css" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/w3.css" />
     </head>
     <body>
         <?php if ($perfil == 1) {
@@ -103,7 +103,8 @@ foreach ($resultadoU as $resU) {
                                             <li id="changepassword"><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
                                             <li class="divider"></li>
                                             <li>
-                                                <input type="button" id="btnlogout" value="Log out" class="btn btn-default btn-flat" style="background:#ef0707 ;Color:#fff;width:100%;" />
+                                                <a href="./Controlador/layout.php" class="btn btn-default btn-flat" value="cerrar sesion" style="background:#ef0707 ;Color:#fff;width:100%;">cerrar sesion</a>
+
                                             </li>
                                         </ul>
                                     </li>
@@ -116,6 +117,15 @@ foreach ($resultadoU as $resU) {
                     </div>
                 </div>
             </div>
+            <script src="js/jquery-1.12.0.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#sidebarCollapse').on('click', function () {
+                        $('#sidebar').toggleClass('active');
+                    });
+                });
+            </script>
         <?php } else { ?>
             <div class="wrapper">
                 <!-- Sidebar Holder -->

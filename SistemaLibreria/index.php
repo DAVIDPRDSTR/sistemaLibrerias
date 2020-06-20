@@ -1,4 +1,4 @@
-<?php  session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@ session_start();
                                    
 				</div>
                              <br>
-                             <form class="login100-form validate-form" action="Controlador/acceso.php" method="POST">
+                             <form class="login100-form validate-form" action="/Controlador/acceso.php" method="POST">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Usuario es requerido">
 						<span class="label-input100"></span>
                                                 <input class="input100" type="text" name="usuario" id="Usuario" >
