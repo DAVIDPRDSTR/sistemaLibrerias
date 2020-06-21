@@ -1,2 +1,3 @@
 <?php
-include './Template/menu.php';
+require './Template/menu.php';
+?>

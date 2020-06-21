@@ -1,8 +1,8 @@
 <?php
 session_start();
-include 'Datos/conexion.php';
+include '../Datos/conexion.php';
 $usuario = $_SESSION['usuario'];
-if ($usuario == "") {
+if ($usuario=="") {
     header("Location:index.php");
 }
 $sql = "select * from usuario where email='$usuario'";
@@ -22,10 +22,10 @@ foreach ($resultadoU as $resU) {
     <head>
         <title></title>
         <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
         <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/w3.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/w3.css" />
     </head>
     <body>
         <?php if ($perfil == 1) {
@@ -103,7 +103,7 @@ foreach ($resultadoU as $resU) {
                                             <li id="changepassword"><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a href="./Controlador/layout.php" class="btn btn-default btn-flat" value="cerrar sesion" style="background:#ef0707 ;Color:#fff;width:100%;">cerrar sesion</a>
+                                                <a href="../Controlador/CerrarSesion.php" class="btn btn-default btn-flat" style="background:#ef0707 ;color:#fff;width:100%;">cerrar sesion</a>
 
                                             </li>
                                         </ul>
@@ -195,7 +195,7 @@ foreach ($resultadoU as $resU) {
                                             <li id="changepassword"><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
                                             <li class="divider"></li>
                                             <li>
-                                                <input type="button" id="btnlogout" value="Log out" class="btn btn-default btn-flat" style="background:#ef0707 ;Color:#fff;width:100%;" />
+                                                <a href="../Controlador/CerrarSesion.php" class="btn btn-default btn-flat" style="background:#ef0707 ;color:#fff;width:100%;">cerrar sesion</a>
                                             </li>
                                         </ul>
                                     </li>
