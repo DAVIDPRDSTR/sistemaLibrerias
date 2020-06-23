@@ -49,7 +49,7 @@ foreach ($resultadoU as $resU) {
                                 Mantenimientos
                             </a>
                             <ul class="collapse list-unstyled" id="CompanySubmenu">
-                                <li><a href="#">Usuarios</a></li>
+                                <li><a href="../CRUD_USUARIO/listarUsuarios.php">Usuarios</a></li>
                                 <li><a href="../CRUD_PHP_AUTOR/index.php">Autores</a></li>
                                 <li><a href="#">Libros</a></li>
                                 <li><a href="#">Editorial</a></li>
