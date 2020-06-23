@@ -11,19 +11,17 @@
                         <div class="form-group col-md-6">
                             <label for="disabledSelect">Editorial</label>
                             <?php
-                            $sql = "SELECT e.id_editorial,e.nombre from editorial e";
+                            $sql = "SELECT * from editorial";
                             $query = $pdo->prepare($sql);
                             $query->execute();
                             $variable = $query->fetchAll();
-                            foreach ($variable as $key => $value) {
-                                $ideditorial=$value['id_editorial'];
-                                $nombreditorial=$value['nombre'];
                             ?>
                             <select id="editorial" name="editorial" class="form-control" required>
                                 <option selected disabled value="">-Seleccione-</option>
-                                <option value="<?php echo $ideditorial; ?>"><?php echo $nombreditorial; ?></option>
+                                <?php foreach ($variable as $key => $value) : ?>
+                                    <option value="<?php echo $value['id_editorial']; ?>"><?php echo $value['nombre']; ?></option>
+                                <?php endforeach ?>
                             </select>
-                            <?php }?>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="disabledSelect">Titulo</label>
@@ -37,13 +35,13 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="disabledSelect">Num paginas</label>
-                            <input class="form-control" id="nump" name="nump" type="text" placeholder="numeros paginas" rerequiredquire>
+                            <input class="form-control" id="nump" name="nump" type="number" placeholder="numeros paginas" maxlength="3" rerequiredquire>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="disabledSelect">Año</label>
-                            <input class="form-control" id="an" name="an" type="text" placeholder="año" maxlength="4" onkeypress="return soloNumeros(event)" required>
+                            <input class="form-control" id="an" name="an" type="number" placeholder="año" maxlength="4" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="disabledSelect">Descripcion</label>
@@ -60,7 +58,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="disabledSelect">Estados</label>
+                            <label for="disabledSelect">Estado</label>
                             <select id="estado" name="estado" class="form-control" required>
                                 <option selected disabled value="">-Seleccione-</option>
                                 <option value="A">Activo</option>
@@ -68,18 +66,16 @@
                             </select>
                         </div>
                     </div>
+                    <button type="submit" class="btn btn-primary" name="btnGuardar"><i class="fa fa-check-square"></i>
+                        Guardar</button>
                 </form>
-
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-remove"></i> Cerrar</button>
-                <button type="submit" class="btn btn-primary" name="btnGuardar"><i class="fa fa-check-square"></i> Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-remove"></i>
+                    Cerrar</button>
             </div>
         </div>
     </div>
 </div>
-<script>
-    $("#file").change(function() {
-        $("#guardar").prop("disabled", this.files.length == 0);
-    });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="funcion.js" type="text/javascript"></script>

@@ -1,7 +1,7 @@
 <?php include_once "templates/header.php"; ?>
 <?php include_once "templates/nav.php"; ?>
 <?php
-$sql = "SELECT l.id_libro,e.nombre,l.titulo,l.descripcion,l.num_paginas,l.edicion,l.portada,l.año,l.estado FROM libro l INNER JOIN editorial e ON l.id_editorial =e.id_editorial ";
+$sql = "SELECT l.id_libro,e.nombre,l.titulo,l.descripcion,l.num_paginas,l.edicion,l.portada,l.ann,l.estado FROM libro l INNER JOIN editorial e ON l.id_editorial =e.id_editorial ";
 $query = $pdo->prepare($sql);
 $query->execute();
 $result = $query->fetchAll();
@@ -57,8 +57,8 @@ $result = $query->fetchAll();
                                             <td><?php echo $value['descripcion']; ?></td>
                                             <td><?php echo $value['num_paginas']; ?></td>
                                             <td><?php echo $value['edicion']; ?></td>
-                                            <td><?php echo $value['portada']; ?></td>
-                                            <td><?php echo $value['año']; ?></td>
+                                            <td> <img src="data:image/jpeg;base64, <?php echo base64_encode($value['portada']);?>" width="50" height="50"/></td>
+                                            <td><?php echo $value['ann']; ?></td>
                                             <td><?php echo $value['estado']; ?></td>
                                             <td>
                                                 <a class="btn btn-primary btn-sm" title="Editar" data-toggle="modal" data-target="#modalEditTec" onclick="obtenerDatosTecnicos('<?php echo $datos ?>')">
