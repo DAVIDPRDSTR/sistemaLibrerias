@@ -1,5 +1,5 @@
 <?php
-	include dirname(__file__,2)."/config/conexion.php";
+	include dirname(__file__,2)."../Datos/conexion.php";
 	/**
 	*
 	*/
@@ -11,16 +11,16 @@
 		function __construct()
 		{
 			$this->conn   = new Conexion();
-			$this->link   = $this->conn->conectarse();
+			$this->link   = $this->conn->conectar();
 		}
 
 		//Trae todos los usuarios registrados
 		public function getUsers()
 		{
 			$query  ="SELECT * FROM autor";
-			$result =mysqli_query($this->link,$query);
+			$result =@mysqli_query($this->link,$query);
 			$data   =array();
-			while ($data[]=mysqli_fetch_assoc($result));
+			while ($data[]=@mysqli_fetch_assoc($result));
 			array_pop($data);
 			return $data;
 		}
