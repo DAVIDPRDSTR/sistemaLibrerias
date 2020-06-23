@@ -4,6 +4,7 @@ try {
     
 } catch (Exception $ex) {
     die('Error'.$ex->getMessage());
+    
 }
 
 ?>
