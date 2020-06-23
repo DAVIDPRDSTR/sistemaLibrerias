@@ -1,5 +1,5 @@
-<?php include_once "Template/header.php"; ?>
-
+<?php include_once "templates/header.php"; ?>
+<?php include_once "templates/nav.php"; ?>
 <?php
 $sql = "SELECT l.id_libro,e.nombre,l.titulo,l.descripcion,l.num_paginas,l.edicion,l.portada,l.año,l.estado FROM libro l INNER JOIN editorial e ON l.id_editorial =e.id_editorial ";
 $query = $pdo->prepare($sql);
@@ -90,4 +90,4 @@ $result = $query->fetchAll();
 
 
 
-<?php include_once "Template/footer.php"; ?>
+<?php include_once "templates/footer.php"; ?>

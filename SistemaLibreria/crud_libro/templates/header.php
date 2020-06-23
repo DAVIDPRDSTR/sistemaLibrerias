@@ -12,22 +12,19 @@
     <title>Libro</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="dist/css/metisMenu.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- DataTables CSS -->
-    <link href="dist/css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- DataTables Responsive CSS -->
-    <link href="dist/css/dataTables/dataTables.responsive.css" rel="stylesheet">
+    <link href="../css/dataTables/dataTables.responsive.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="dist/css/startmin.css" rel="stylesheet">
+    <link href="../css/startmin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="dist/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
