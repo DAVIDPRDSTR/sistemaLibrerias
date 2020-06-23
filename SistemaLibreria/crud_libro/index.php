@@ -21,9 +21,10 @@ $result = $query->fetchAll();
                 <div class="panel panel-default">
                     <br>
                     <div class="panel-heading">
-                        <a class="btn btn-primary" title="Nuevo" data-toggle="modal" data-target="#modalAddTec">
+                        <a class="btn btn-primary" title="Nuevo" data-toggle="modal" data-target="#modalAddLibro">
                             <i class="fa fa-plus"></i> Nuevo
                         </a>
+                    <?php include_once "addLibro.php";?>
                     </div>
                     <div class="panel-heading">
                         Registro de los libros

@@ -14,6 +14,6 @@
 
     <!-- Top Navigation: Left Menu -->
     <ul class="nav navbar-nav navbar-left navbar-top-links">
-        <li><a href="#"><i class="fa fa-home fa-fw"></i> Inicio</a></li>
+        <li><a href="../Template/menu.php"><i class="fa fa-home fa-fw"></i> Inicio</a></li>
     </ul>
 </nav>
