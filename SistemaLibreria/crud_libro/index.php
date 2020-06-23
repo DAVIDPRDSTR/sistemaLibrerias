@@ -20,8 +20,11 @@ $result = $query->fetchAll();
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <br>
-                    <a href="#" data-toggle="modal" data-target="#modalAdd" class="btn btn-outline-primary" title="Agregar Usuario"><i class="fa fa-user-plus"></i> Agregar
-                    </a>
+                    <div class="panel-heading">
+                        <a class="btn btn-primary" title="Nuevo" data-toggle="modal" data-target="#modalAddTec">
+                            <i class="fa fa-plus"></i> Nuevo
+                        </a>
+                    </div>
                     <div class="panel-heading">
                         Registro de los libros
                     </div>
@@ -57,10 +60,12 @@ $result = $query->fetchAll();
                                             <td><?php echo $value['año']; ?></td>
                                             <td><?php echo $value['estado']; ?></td>
                                             <td>
-                                                <a href="#modalEdit_<?php echo $value['id_libro']; ?>" class="btn btn-outline-primary btn-sm" data-toggle="modal" title="Modificar">
-                                                    <i class="fa fa-pen-square"></i>Editar</a>
-                                                <a href="controlador/crudUsuarios.php?codid=<?php echo $value['id_libro']; ?>" class="btn btn-outline-danger btn-sm" title="Eliminar">
-                                                    <i class="fa fa-trash-alt"></i>Eliminar</a>
+                                                <a class="btn btn-primary btn-sm" title="Editar" data-toggle="modal" data-target="#modalEditTec" onclick="obtenerDatosTecnicos('<?php echo $datos ?>')">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" title="Eliminar" data-toggle="modal" data-target="#modalDeleteTec" onclick="obtenerIDEliminar('<?php echo $datos ?>')">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     <?php
