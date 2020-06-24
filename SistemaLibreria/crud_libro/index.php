@@ -61,6 +61,7 @@ $result = $query->fetchAll();
                                             <td><?php echo $value['ann']; ?></td>
                                             <td><?php echo $value['estado']; ?></td>
                                             <td>
+                                            <!--href nos permite enviar el id hacia el modal -->
                                                 <a  href="#modalmodificar_<?php echo $value['id_libro']; ?>" class="btn btn-primary btn-sm" title="Editar" data-toggle="modal">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
@@ -69,7 +70,7 @@ $result = $query->fetchAll();
                                                 </a>
                                             </td>
                                             <?php
-                                            include_once "modificar.php";
+                                              include ("modificar.php");
                                             ?>
                                         </tr>
                                     <?php
