@@ -1,6 +1,7 @@
 <?php 
 session_start();
-include 'conexion.php';
+// include 'conexion.php';
+include '../../Datos/conexion.php';
 ?>
 
 <?php 
@@ -19,15 +20,15 @@ if($_GET){
 }   
 
 if(isset($_POST['btnGuardar'])!=null) {
-        $datos =['nombres'=> $_POST['txtNombre'],
+        $datos =['nom'=> $_POST['txtNombre'],
                 'dni'=>$_POST['txtDni'],
-                'direccion'=>$_POST['txtDireccion'],
-                'fecha_nacimiento'=>date("Y/m/d",strtotime($_POST['txtFecha'])),
-                'telefono'=>$_POST['txtTelefono'],
-                'email'=> $_POST['txtUsuario'],
-                'contraseña'=>$_POST['txtClave'],
-                'id_rol'=>$_POST['cmbRol']];
-        $sql= "insert into usuario (nombres, dni, direccion, fecha_nacimiento, telefono, email, contraseña, id_rol) values(:nombres,:dni,:direccion,:fecha_nacimiento,:telefono,:email,:contraseña,:id_rol);";
+                'dir'=>$_POST['txtDireccion'],
+                'fnac'=>date("Y/m/d",strtotime($_POST['txtFecha'])),
+                'tel'=>$_POST['txtTelefono'],
+                'ema'=> $_POST['txtUsuario'],
+                'pass'=>$_POST['txtClave'],
+                'rol'=>$_POST['cmbRol']];
+        $sql= "insert into usuario (nombres, dni, direccion, fecha_nacimiento, telefono, email, contraseña, id_rol) values(:nom,:dni,:dir,:fnac,:tel,:ema,:pass,:rol);";
         $sqlquery = $pdo->prepare($sql);
         $sqlquery ->execute($datos);
         header("Location:../listarUsuarios.php");

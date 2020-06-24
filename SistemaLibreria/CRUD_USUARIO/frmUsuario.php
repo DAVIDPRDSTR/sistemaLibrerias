@@ -1,12 +1,11 @@
 <?php 
-//include './Template/template.php'; 
 include 'views/encabezado.php';
 @$cod=$_GET['cod'];
 if ($cod=="") {?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-          <h1>*** NUEVO USUARIOS ***</h1>
+          <h1>*** NUEVO USUARIO ***</h1>
         </div>
     </div>
 </div>
@@ -15,7 +14,7 @@ if ($cod=="") {?>
   <div class="row">
     <div class="col-lg-12">
 
-        <form class="needs-validation" novalidate action="controlador/usuariosControlador.php   " method="POST">
+        <form class="needs-validation" novalidate action="controlador/usuariosControlador.php" method="POST">
         <div class="form-row">
             <div class="col-md-6 mb-3">
               <label for="validationCustom01">Apellidos y Nombres</label>
@@ -130,12 +129,11 @@ if ($cod=="") {?>
   $query->execute();
   $resultado=$query->fetchAll();
   foreach($resultado as $res){
-    $nombre = $res['nombres'];
+    $nombre = $res['nombre'];
     $usuario = $res['email'];
     $password = $res['contraseña'];
     // $rol = $res['nombre'];
     // $nombre = $res['nombre'];
-
   }
   ?>
 
@@ -255,9 +253,4 @@ if ($cod=="") {?>
 //include './Template/footer.php'; 
 ?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 

@@ -3,7 +3,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col text-center">
-			<p>Desarrollado por Grupo5</p>
+			<p>Desarrollado por Grupo2</p>
 			
 		</div>
 	</div>

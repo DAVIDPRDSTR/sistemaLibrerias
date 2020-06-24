@@ -1,10 +1,8 @@
 <?php 
-//include 'toolbar.php';;  
 include '../Datos/conexion.php';
 include 'views/encabezado.php';
 ?>
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -91,9 +89,4 @@ include 'views/encabezado.php';
     ?>
 </div>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
