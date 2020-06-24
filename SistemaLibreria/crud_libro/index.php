@@ -61,13 +61,16 @@ $result = $query->fetchAll();
                                             <td><?php echo $value['ann']; ?></td>
                                             <td><?php echo $value['estado']; ?></td>
                                             <td>
-                                                <a class="btn btn-primary btn-sm" title="Editar" data-toggle="modal" data-target="#modalEditTec" onclick="obtenerDatosTecnicos('<?php echo $datos ?>')">
+                                                <a  href="#modalmodificar_<?php echo $value['id_libro']; ?>" class="btn btn-primary btn-sm" title="Editar" data-toggle="modal">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                                 <a class="btn btn-danger btn-sm" title="Eliminar" data-toggle="modal" data-target="#modalDeleteTec" onclick="obtenerIDEliminar('<?php echo $datos ?>')">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             </td>
+                                            <?php
+                                            include_once "modificar.php";
+                                            ?>
                                         </tr>
                                     <?php
                                     } ?>
