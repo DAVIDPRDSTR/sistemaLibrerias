@@ -57,7 +57,13 @@ $result = $query->fetchAll();
                                         <td><?php echo $value['edicion']; ?></td>
                                         <td> <img src="data:image/jpeg;base64, <?php echo base64_encode($value['portada']); ?>" width="50" height="50" /></td>
                                         <td><?php echo $value['ann']; ?></td>
-                                        <td><?php echo $value['estado']; ?></td>
+                                        <td>
+                                            <?php
+                                            if ($value['estado'] == 'A') {
+                                                echo "<span class='badge badge-dark'>Activo</span>";
+                                            }
+                                            ?>
+                                        </td>
                                         <td>
                                             <!--href nos permite enviar el id hacia el modal -->
                                             <a href="#modalmodificar_<?php echo $value['id_libro']; ?>" class="btn btn-primary btn-sm" title="Editar" data-toggle="modal">
