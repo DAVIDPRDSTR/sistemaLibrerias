@@ -66,7 +66,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" name="btnGuardar"><i class="fa fa-check-square"></i>
+                    <button type="submit" class="btn btn-primary" name="btnGuardar" title="Guardar"><i class="fa fa-save"></i>
                         Guardar</button>
                 </form>
             </div>
