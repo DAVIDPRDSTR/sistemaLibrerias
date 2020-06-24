@@ -1,4 +1,5 @@
 <?php
+// 1ra conexion
 try {
     $pdo=new PDO("mysql:dbname=libreria;host=35.192.84.36","6ANOCTURNO","6aNOCT@**");
     
@@ -6,7 +7,7 @@ try {
     die('Error'.$ex->getMessage());
 }
 
-
+// 2nda conexion
 	class Conexion{
 		private $host;
 		private $user;

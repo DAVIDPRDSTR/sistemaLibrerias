@@ -17,7 +17,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
-  		<a class="navbar-brand list-items" href="index.php"><strong>AUTOR</strong></a>
+  		<a class="navbar-brand list-items" href="#"><strong>AUTOR</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -29,7 +29,7 @@
 		         
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="http://localhost:84/sistemaLibrerias-1/SistemaLibreria/login.php">Salir</a>
+		          <a class="dropdown-item" href="../Template/menu.php">Salir</a>
 		        </div>
 		      </li>
 		    </ul>
