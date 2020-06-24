@@ -21,7 +21,8 @@ include 'views/encabezado.php';
 
 <div class="container">
     <div class="row">
-    <a href="frmUsuario.php" class="btn btn-primary" type="submit">Agregar</a>
+    <a href="frmUsuario.php" class="btn btn-primary">Agregar</a>
+    <br>
     <!-- <input class="btn btn-primary" type="submit" value="Agregar"> -->
         <div class="col-lg-12 text-center">
         
@@ -51,10 +52,10 @@ include 'views/encabezado.php';
                                     if($resU['estado']=='A'){
                                         echo "<span class='badge badge-primary'>Activo</span>"; 
                                     }else{
-                                        echo "<span class='badge badge-primary'>Pendiente</span>"; 
+                                        echo "<span class='badge badge-primary'>Inactivo</span>"; 
                                     }
                         ?></td>
-                        <td><a href="frmUsuario.php?cod=<?php echo $resU ['id_usuario']; ?>"> <i class="fas fa-edit" title="Modificar"></i></a></td>
+                        <td><a href="frmModificarUsuario.php?cod=<?php echo $resU ['id_usuario']; ?>"> <i class="fas fa-edit" title="Modificar"></i></a></td>
                         <td><a href="controlador/usuariosController.php?cod=<?php echo $resU ['id_usuario']; ?>"><i class="fas fa-trash-alt" title="Eliminar"></i></a></td>
                     </tr>
                     </tbody>

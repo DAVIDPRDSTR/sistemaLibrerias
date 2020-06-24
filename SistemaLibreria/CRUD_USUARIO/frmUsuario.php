@@ -1,7 +1,7 @@
 <?php 
 include 'views/encabezado.php';
-@$cod=$_GET['cod'];
-if ($cod=="") {?>
+
+?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -66,10 +66,10 @@ if ($cod=="") {?>
             
             <div class="col-md-3 mb-3">
                 <label for="validationCustom04">Rol</label>
-                <select name="cmbRol" class="custom-select" id="validationCustom04" require>
+                <select name="cmbRol" class="custom-select" id="validationCustom04" required="">
                   <option selected disabled value="">Seleccione un rol</option>
                   <option value="1">Administrador</option>
-                  <option value="2">Invtado</option>
+                  <option value="2">Invitado</option>
                 </select>
                 <div class="valid-feedback">
                   Correcto!
@@ -119,113 +119,11 @@ if ($cod=="") {?>
           </div>  
           
         <button class="btn btn-primary" name="btnGuardar"type="submit">Registrar</button>
+        <a href="listarUsuarios.php"><input type="button" class="btn btn-danger" value="Cancelar"></a>
       </form>
       </div>
     </div>
 </div>
-<?php } else { 
-  $select="select * from usuario where id_usuario=$cod";
-  $query=$pdo->prepare($select);
-  $query->execute();
-  $resultado=$query->fetchAll();
-  foreach($resultado as $res){
-    $nombre = $res['nombre'];
-    $usuario = $res['email'];
-    $password = $res['contraseña'];
-    // $rol = $res['nombre'];
-    // $nombre = $res['nombre'];
-  }
-  ?>
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1>*** ACTUALIZAR USUARIOS ***</h1>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-
-      <form class="needs-validation" novalidate action="controlador/usuariosController.php" method="POST">
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <input type="hidden" name="txtCodigo" class="form-control" value="<?php echo $cod;?>" required>
-              <label for="validationCustom01">Apellidos y Nombres</label>
-              <input type="text" name="txtNombre" class="form-control" id="validationCustom01" value="<?php echo $nombre;?>" placeholder="Apellidos y Nombres" value="" required>
-              <div class="valid-feedback">
-                Correcto!
-              </div>
-              <div class="invalid-feedback">
-                Por favor ingrese Apellidos y Nombres
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="validationCustom02">Usuario</label>
-              <input type="text" name="txtUsuario" class="form-control" id="validationCustom02" value="<?php echo $usuario;?>" placeholder="Usuario" value="" required>
-              <div class="valid-feedback">
-               Correcto!
-              </div>
-              <div class="invalid-feedback">
-                Por favor ingrese un usuario
-              </div>
-            </div>
-        </div>
-
-        <div class="form-row">
-            <div class="col-md-6 mb-3">
-                <label for="validationCustom03">Contraseña</label>
-                <input type="password" name="txtClave" class="form-control" id="validationCustom03" value="<?php echo $password;?>" placeholder="Contraseña" required>
-                <div class="valid-feedback">
-                  Correcto!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor ingrese una contraseña
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="validationCustom04">Rol</label>
-                <select name="cmbRol" class="custom-select" id="validationCustom04" require>
-                  <option selected disabled value="">Seleccione un rol</option>
-                  <option value="1">Administrador</option>
-                  <option value="2">Invtado</option>
-                </select>
-                <div class="valid-feedback">
-                  Correcto!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor seleccione un rol
-                </div>
-            </div>
-
-            <div class="col-md-3 mb-3">
-                <label for="validationCustom05">Estado</label>
-                <select name="cmbEstado" class="custom-select" id="validationCustom05" require>
-                    <option value="0">Inactivo</option>
-                    <option value="1">Activo</option>
-                </select>
-                <div class="valid-feedback">
-                  Correcto!
-                </div>
-                <div class="invalid-feedback">
-                  Por favor seleccione un estado
-                </div>
-            </div>
-        </div>
-        <button class="btn btn-primary" name="btnActualizar" type="submit">Actualizar</button>
-      </form>
-      </div>
-    </div>
-</div>
-
-<?php
-}?>
-
-
-
-
 
 
 <script>
