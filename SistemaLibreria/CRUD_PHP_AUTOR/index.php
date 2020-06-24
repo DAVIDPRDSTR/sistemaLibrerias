@@ -10,3 +10,4 @@
 	}
 	include 'views/'.$folder.'/'.$page.'.php';
 	include 'views/footer.php';
+// Pantalla principal de crud_autor
