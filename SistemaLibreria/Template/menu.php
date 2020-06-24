@@ -50,7 +50,7 @@ foreach ($resultadoU as $resU) {
                             </a>
                             <ul class="collapse list-unstyled" id="CompanySubmenu">
                                 <li><a href="../CRUD_USUARIO/listarUsuarios.php">Usuarios</a></li>
-                                <li><a href="../CRUD_PHP_AUTOR/index.php">Autores</a></li>
+                                <li><a href="../crud_autor">Autores</a></li>
                                 <li><a href="../crud_libro/index.php">Libros</a></li>
                                 <li><a href="../Crud_Editorial">Editorial</a></li>
                             </ul>
