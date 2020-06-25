@@ -1,4 +1,4 @@
-<?php include '../Template/header.php';  ?>
+
 <?php 
 include '../Datos/conexion.php';
 include 'views/encabezado.php';
@@ -292,6 +292,3 @@ if ($cod=="") {?>
 })();
 </script>
 
-<?php 
-//include './Template/footer.php'; 
-?>
