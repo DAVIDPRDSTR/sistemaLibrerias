@@ -57,7 +57,7 @@ include 'views/encabezado.php';
                                     }
                         ?></td>
                         <td><a href="frmModificarUsuario.php?cod=<?php echo $resU ['id_usuario']; ?>"> <i class="fas fa-edit" title="Modificar"></i></a></td>
-                        <td><a href="controlador/usuariosController.php?cod=<?php echo $resU ['id_usuario']; ?>"><i class="fas fa-trash-alt" title="Eliminar"></i></a></td>
+                        <td><a href="controlador/usuariosControlador.php?cod=<?php echo $resU ['id_usuario']; ?>"><i class="fas fa-trash-alt" title="Eliminar"></i></a></td>
                     </tr>
                     </tbody>
                     <?php }

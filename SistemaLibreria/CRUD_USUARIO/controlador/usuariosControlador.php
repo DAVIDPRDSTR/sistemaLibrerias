@@ -5,13 +5,12 @@ include '../../Datos/conexion.php';
 ?>
 
 <?php 
+
 if($_GET){
         $cod=$_GET['cod']; // metodo 1 unico valor        
-        $sql= "update usuarios set estado='I' where id_usuario=$cod";// usando metodo 1          
+        $sql= "update usuario set estado='I' where id_usuario=$cod";// usando metodo 1          
         $query = $pdo->prepare($sql);
         $query -> execute();
-        
-        // echo "<script> alert ('Registro Eliminado');location.href='../usuarios.php'</script>";
         header("Location:../listarUsuarios.php");
         $_SESSION['msjEliminar']='OK';
 }   
@@ -30,6 +29,8 @@ if(isset($_POST['btnGuardar'])!=null) {
         $sqlquery ->execute($datos);
         header("Location:../listarUsuarios.php");
 }
+
+
 
 if (isset($_POST['btnModificar'])!=null) {
         $datos =[
