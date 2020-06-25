@@ -1,8 +1,8 @@
 <?php 
 include '../Datos/conexion.php';
 include 'views/encabezado.php';
-@$cod=$_GET['cod'];
-if ($cod=="") {?>
+
+?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -42,10 +42,10 @@ if ($cod=="") {?>
 
             <div class="col-md-2 mb-1">
                 <label for="validationCustom04">Rol</label>
-                <select name="cmbRol" class="custom-select" id="validationCustom04" require>
+                <select name="cmbRol" class="custom-select" id="validationCustom04" required="">
                   <option selected disabled value="">Seleccione un rol</option>
                   <option value="1">Administrador</option>
-                  <option value="2">Invtado</option>
+                  <option value="2">Invitado</option>
                 </select>
                 <div class="valid-feedback">
                   Correcto!
@@ -117,13 +117,34 @@ if ($cod=="") {?>
                 <div class="invalid-feedback">
                     Por favor ingrese direccion
                 </div>
+<<<<<<< HEAD
              </div>  
           </div>         
         <button class="btn btn-primary btn-lg" name="btnGuardar" type="submit">Registrar</button>
+=======
+             </div>
+              
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom07">Teléfono</label>
+              <input type="text" name="txtTelefono"class="form-control" id="validationCustom07" placeholder="# Telefono" value="" required>
+              <div class="valid-feedback">
+                Correcto!
+              </div>
+              <div class="invalid-feedback">
+                Por favor ingrese numero telefónico
+              </div>
+             </div>
+              
+          </div>  
+          
+        <button class="btn btn-primary" name="btnGuardar"type="submit">Registrar</button>
+        <a href="listarUsuarios.php"><input type="button" class="btn btn-danger" value="Cancelar"></a>
+>>>>>>> d2515e6b9db2710b1fdfc4cbee5a6abdf680c5fa
       </form>
       </div>
     </div>
 </div>
+<<<<<<< HEAD
 <?php } else { 
   $select="select * from usuario where id_usuario=$cod";
   $query=$pdo->prepare($select);
@@ -273,6 +294,8 @@ if ($cod=="") {?>
 
 
 
+=======
+>>>>>>> d2515e6b9db2710b1fdfc4cbee5a6abdf680c5fa
 
 
 <script>

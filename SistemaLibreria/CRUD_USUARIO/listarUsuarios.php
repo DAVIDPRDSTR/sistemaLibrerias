@@ -1,3 +1,4 @@
+<?php include '../Template/header.php';  ?>
 <?php 
 include '../Datos/conexion.php';
 include 'views/encabezado.php';
@@ -21,6 +22,7 @@ include 'views/encabezado.php';
 
 <div class="container">
     <div class="row">
+<<<<<<< HEAD
         <div class="col-lg-12">
         <a href="frmUsuario.php" class="btn btn-primary" type="submit"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp;Nuevo Usuario</a>
         </div>
@@ -30,6 +32,11 @@ include 'views/encabezado.php';
 
     <div class="row">
 
+=======
+    <a href="frmUsuario.php" class="btn btn-primary">Agregar</a>
+    <br>
+    <!-- <input class="btn btn-primary" type="submit" value="Agregar"> -->
+>>>>>>> d2515e6b9db2710b1fdfc4cbee5a6abdf680c5fa
         <div class="col-lg-12 text-center">
         
             <table class="table table-hover">
@@ -57,10 +64,14 @@ include 'views/encabezado.php';
                                     if($resU['estado']=='A'){
                                         echo "<span class='badge badge-primary'>Activo</span>"; 
                                     }else{
-                                        echo "<span class='badge badge-primary'>Pendiente</span>"; 
+                                        echo "<span class='badge badge-primary'>Inactivo</span>"; 
                                     }
                         ?></td>
+<<<<<<< HEAD
                         <td><a href="frmUsuario.php?cod=<?php echo $resU ['id_usuario']; ?>"> <i class="fas fa-edit" title="Modificar"></i></a></td>
+=======
+                        <td><a href="frmModificarUsuario.php?cod=<?php echo $resU ['id_usuario']; ?>"> <i class="fas fa-edit" title="Modificar"></i></a></td>
+>>>>>>> d2515e6b9db2710b1fdfc4cbee5a6abdf680c5fa
                         <td><a href="controlador/usuariosControlador.php?cod=<?php echo $resU ['id_usuario']; ?>"><i class="fas fa-trash-alt" title="Eliminar"></i></a></td>
                     </tr>
                     </tbody>
@@ -94,4 +105,4 @@ include 'views/encabezado.php';
     ?>
 </div>
 
-
+<?php include '../Template/footer.php';  ?>
