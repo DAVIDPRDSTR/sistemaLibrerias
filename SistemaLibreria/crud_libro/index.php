@@ -1,3 +1,4 @@
+<?php include '../Template/header.php';  ?>
 <?php include_once "templates/header.php"; ?>
 <?php include_once "templates/nav.php"; ?>
 <?php
@@ -95,11 +96,6 @@ $result = $query->fetchAll();
 
 </div>
 <!-- /.container-fluid -->
-</div>
-
-
-
-
-
 
 <?php include_once "templates/footer.php"; ?>
+<?php include '../Template/footer.php';  ?>

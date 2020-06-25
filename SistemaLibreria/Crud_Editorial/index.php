@@ -1,3 +1,4 @@
+<?php include '../Template/header.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,3 +84,4 @@
     </footer>
 
 </html>
+<?php include '../Template/footer.php';  ?>
