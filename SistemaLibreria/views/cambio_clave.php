@@ -64,12 +64,11 @@ $user = (object)$user;
                                             type="submit">
                                         Confirmar
                                     </button>
-                                    <button class="btn btn-danger form-control" name="btn_cancelar" id="btn_cancelar"
-                                            type="submit">
-                                        Cancelar
-                                    </button>
                                 </div>
                             </form>
+                            <a class="btn btn-danger form-control" name="btn_cancelar" id="btn_cancelar"  href="<?php echo $baseUrl ?>/Template/menu.php">
+                                Cancelar
+                            </a>
                         </section>
                     </div>
                 </div>
