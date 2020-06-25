@@ -18,10 +18,10 @@ if (validarUsuario($user, $pdo) == true) {
     if (@$rol) {
         switch ($rol) {
             case ("1"):
-                echo "<script>alert('Bienvenido Administrador');location.href='../Template/principal.php'</script>";
+                echo "<script>alert('Bienvenido Administrador');location.href='../Template/menu.php'</script>";
 
                 break;
-            case ("2"): echo "<script>alert('Bienvenido invitado');location.href='../Template/principal.php'</script>";
+            case ("2"): echo "<script>alert('Bienvenido invitado');location.href='../Template/menu.php'</script>";
 
                 break;
         }

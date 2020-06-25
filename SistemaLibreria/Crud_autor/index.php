@@ -1,4 +1,4 @@
-<?php include '../Template/header.php';  ?>
+
 <?php
 	define('HOMEDIR',__DIR__);
 
@@ -12,4 +12,3 @@
 	include 'views/'.$folder.'/'.$page.'.php';
 	include 'views/footer.php';
         ?>
-<?php include '../Template/footer.php';  ?>
