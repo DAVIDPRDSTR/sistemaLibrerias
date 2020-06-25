@@ -41,7 +41,7 @@ foreach ($resultadoU as $resU) {
 
                     <ul class="list-unstyled components">
                         <li class="active">
-                            <a href="#">
+                            <a href="<?php echo $baseUrl ?>/Template/menu.php">
                                 <i class="glyphicon glyphicon-home"></i>
                                 Inicio
                             </a>
@@ -105,7 +105,7 @@ foreach ($resultadoU as $resU) {
                                         <ul class="dropdown-menu" style="padding: 10px;">
                                             <li><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-user"></i> <?php echo $nombreU; ?></a></li>
                                             <li class="divider"></li>
-                                            <li id="changepassword"><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
+                                            <li id="changepassword"><a href="#" style="background: #ffffff;" onclick="changePassword();"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
                                             <li class="divider"></li>
                                             <li>
                                                 <a href="../Controlador/CerrarSesion.php" class="btn btn-default btn-flat" style="background:#ef0707 ;color:#fff;width:100%;">cerrar sesion</a>
@@ -197,7 +197,7 @@ foreach ($resultadoU as $resU) {
                                                     <ul class="dropdown-menu" style="padding: 10px;">
                                                         <li><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-user"></i> <?php echo $nombreU; ?></a></li>
                                                         <li class="divider"></li>
-                                                        <li id="changepassword"><a href="#" style="background: #ffffff;"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
+                                                        <li id="changepassword"><a href="#" style="background: #ffffff;" onclick="changePassword();"><i class="glyphicon glyphicon-lock"></i> Change Password</a></li>
                                                         <li class="divider"></li>
                                                         <li>
                                                             <a href="../Controlador/CerrarSesion.php" class="btn btn-default btn-flat" style="background:#ef0707 ;color:#fff;width:100%;">cerrar sesion</a>
