@@ -1,6 +1,5 @@
 <?php include_once "../../Datos/conexion.php";
 
-
 if (isset($_POST['btnGuardar']) != null) {
     $imagen = ($_FILES['file']['tmp_name']);
     $avatar = fopen($imagen, 'rb');
@@ -27,4 +26,13 @@ if (isset($_POST['btnGuardar']) != null) {
     $query->bindParam(':ideditorial', $ideditorial, PDO::PARAM_INT);
     $query->execute();
     header("location: ../index.php");
+}
+if(isset($_POST['btnEliminar']) != null) {
+    $codigo = $_POST['idlibro'];
+    $sql = "UPDATE libro set estado='I' where id_libro='$codigo'";
+    $query = $pdo->prepare($sql);
+    $query -> execute();
+    if($query){
+        header("location: ../index.php");
+    }
 }

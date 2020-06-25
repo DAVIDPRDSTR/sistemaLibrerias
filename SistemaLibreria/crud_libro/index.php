@@ -47,7 +47,7 @@ $result = $query->fetchAll();
                             <tbody>
                                 <?php
                                 foreach ($result as $key => $value) {
-                                ?>
+                                    ?>
                                     <tr class="odd gradeX">
                                         <td><?php echo $value['id_libro']; ?></td>
                                         <td><?php echo $value['nombre']; ?></td>
@@ -69,16 +69,19 @@ $result = $query->fetchAll();
                                             <a href="#modalmodificar_<?php echo $value['id_libro']; ?>" class="btn btn-primary btn-sm" title="Editar" data-toggle="modal">
                                                 <i class="fa fa-edit"></i>
                                             </a>
-                                            <a class="btn btn-danger btn-sm" title="Eliminar" data-toggle="modal" data-target="#modal">
+                                            <a href="#modalEliminar_<?php echo $value['id_libro']; ?>" class="btn btn-danger btn-sm" title="Eliminar" data-toggle="modal">
                                                 <i class="fa fa-trash"></i>
                                             </a>
+                                            <?php
+                                            include("eliminar.php");
+                                            ?>
                                         </td>
                                         <?php
                                         include("modificar.php");
                                         ?>
                                     </tr>
-                                <?php
-                                } ?>
+                                    <?php }
+                                ?>
                             </tbody>
                         </table>
                     </div>
