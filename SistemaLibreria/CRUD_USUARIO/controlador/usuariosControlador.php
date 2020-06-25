@@ -8,7 +8,7 @@ include '../../Datos/conexion.php';
 if($_GET){
         $cod=$_GET['cod']; // metodo 1 unico valor
         $datos =['id'=>$_GET['cod']]; // metodo 2 arreglo detos
-        $sql= "update usuarios set estado='I' where id_usuario=$cod";// usando metodo 1  
+        $sql= "update usuario set estado='I' where id_usuario=$cod";// usando metodo 1  
         $sql2= "update usuarios set estado='I' where id_usuario=:id"; // usando metodo 2  
 
         $query = $pdo->prepare($sql);
@@ -37,12 +37,17 @@ if(isset($_POST['btnGuardar'])!=null) {
 if (true) {
         $datos =[
                 'id'=>$_POST['txtCodigo'],
-                'nombre'=>$_POST['txtNombre'],
-                'usuario'=>$_POST['txtUsuario'],
-                'password'=>$_POST['txtClave']
+                'nom'=> $_POST['txtNombre'],
+                'dni'=>$_POST['txtDni'],
+                'dir'=>$_POST['txtDireccion'],
+                'fnac'=>date("Y/m/d",strtotime($_POST['txtFecha'])),
+                'tel'=>$_POST['txtTelefono'],
+                'ema'=> $_POST['txtUsuario'],
+                'pass'=>$_POST['txtClave'],
+                'rol'=>$_POST['cmbRol']
                 ]; // metodo 2 arreglo datos
          
-        $sql2= "update usuarios set nombre=:nombre, usuario=:usuario, password=:password where codU=:id"; // usando metodo 2  
+        $sql2= "update usuario set nombres=:nom, dni=:dni, direccion=:dir,fecha_nacimiento=:fnac,telefono=:tel, email=:ema, contraseña=:pass, id_rol=:rol where id_usuario=:id"; // usando metodo 2  
         $query = $pdo->prepare($sql2);
         $query -> execute($datos);
         
@@ -52,10 +57,3 @@ if (true) {
 }
 
 ?>
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-

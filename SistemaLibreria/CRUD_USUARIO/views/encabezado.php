@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,32 +17,14 @@
 	</style>
 </head>
 <body>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	    <a class="navbar-brand text-success" href="../Template/menu.php" >
+		<i class="fa fa-users fa-2x" aria-hidden="true" style="color:white;"></i>&nbsp;
 		 REGRESAR
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav mr-auto">
-		      <li class="nav-item dropdown">
-		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		        Usuario 
-		        </a>
-		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				  <a class="dropdown-item" href="#">Nuevo</a>
-				  <a class="dropdown-item" href="#">Actualizar</a>
-				  <a class="dropdown-item" href="#">Eliminar</a>
-				  <a class="dropdown-item" href="#">Salir</a>
-		        </div>
-		      </li>
-		    </ul>
-		  </div>
 	</nav>
 
-	<!-- <div class="container"> -->
-</body>
-</html>
+<div class="container">

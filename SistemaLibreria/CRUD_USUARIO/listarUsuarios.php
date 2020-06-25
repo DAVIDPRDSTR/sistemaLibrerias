@@ -21,20 +21,26 @@ include 'views/encabezado.php';
 
 <div class="container">
     <div class="row">
-    <a href="frmUsuario.php" class="btn btn-primary" type="submit">Agregar</a>
-    <!-- <input class="btn btn-primary" type="submit" value="Agregar"> -->
+        <div class="col-lg-12">
+        <a href="frmUsuario.php" class="btn btn-primary" type="submit"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i>&nbsp;Nuevo Usuario</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+
         <div class="col-lg-12 text-center">
         
             <table class="table table-hover">
-            <thead class="thead-dark">
-                <tr class="font-weight-bold">
+            <thead class="bg-dark">
+                <tr class=" text-white font-weight-bold">
                     <td>CODIGO</td>
                     <td>NOMBRE</td>
                     <td>USUARIO</td>
                     <td>ROL</td>
                     <td>ESTADO</td>
                     <td colspan="2">ACCIONES</td>   
-                   
                 </tr>
             </thead>
                     <?php 
@@ -55,14 +61,13 @@ include 'views/encabezado.php';
                                     }
                         ?></td>
                         <td><a href="frmUsuario.php?cod=<?php echo $resU ['id_usuario']; ?>"> <i class="fas fa-edit" title="Modificar"></i></a></td>
-                        <td><a href="controlador/usuariosController.php?cod=<?php echo $resU ['id_usuario']; ?>"><i class="fas fa-trash-alt" title="Eliminar"></i></a></td>
+                        <td><a href="controlador/usuariosControlador.php?cod=<?php echo $resU ['id_usuario']; ?>"><i class="fas fa-trash-alt" title="Eliminar"></i></a></td>
                     </tr>
                     </tbody>
                     <?php }
                     ?>
             </table>
         </div>
-
     </div>
 <?php 
     if(@$_SESSION['msjEliminar']=='OK') { ?> 
