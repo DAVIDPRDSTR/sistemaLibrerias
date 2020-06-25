@@ -1,7 +1,6 @@
-<?php 
-include 'views/encabezado.php';
+<?php include '../Template/header.php';?>
 
-?>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -147,8 +146,7 @@ include 'views/encabezado.php';
 })();
 </script>
 
-<?php 
-//include './Template/footer.php'; 
-?>
+
+<?php include '../Template/footer.php';?>
 
 
