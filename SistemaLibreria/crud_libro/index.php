@@ -74,10 +74,10 @@ $result = $query->fetchAll();
                                                 <i class="fa fa-trash"></i>
                                             </a>
                                             <?php
-                                            include("eliminar.php");
+                                            include("eliminar.php");                                           
                                             ?>
                                         </td>
-                                        <?php
+                                        <?php                                       
                                         include("modificar.php");
                                         ?>
                                     </tr>

@@ -7,7 +7,7 @@
             <div class="modal-body">
                 <form method="post" action="controladorLibro/crudLibro.php">
                     <center>
-                        <div class="form-row">
+                        <div class="form-row"><input type="hidden" id="idlibro" name="idlibro" value="<?php echo $value['id_libro'] ?>">
                             <div class="form-group">
                                 <input type="hidden" id="idlibro" name="idlibro" value="<?php echo $value['id_libro'] ?>">
                                 <label for="disabledSelect">¿¿Seguro que desea eliminar este libro??</label><br>

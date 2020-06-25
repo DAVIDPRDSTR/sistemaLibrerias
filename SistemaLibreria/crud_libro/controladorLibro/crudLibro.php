@@ -36,3 +36,28 @@ if(isset($_POST['btnEliminar']) != null) {
         header("location: ../index.php");
     }
 }
+
+if (isset($_POST['btnModificar']) != null) {
+
+    $codigo = $_POST['idlibro'];  
+    
+    $titulo = $_POST['titulo'];
+    $edicion = $_POST['edicion'];
+    $nump = $_POST['nump'];
+    $an = $_POST['an'];
+    $descripcion = $_POST['descripcion'];
+    $ideditorial = $_POST['editorial'];
+    
+    $sqlu = "UPDATE libro set titulo = :titulo, descripcion = :descripcion, num_paginas = :nump, edicion = :edicion, ann = :ann, id_editorial = :ideditorial where id_libro = $codigo;";
+    $queryu = $pdo->prepare($sqlu);
+    
+    $queryu->bindParam(':titulo', $titulo, PDO::PARAM_STR);  
+    $queryu->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
+    $queryu->bindParam(':nump', $nump, PDO::PARAM_INT);
+    $queryu->bindParam(':edicion', $edicion, PDO::PARAM_STR);
+    $queryu->bindParam(':ann', $an, PDO::PARAM_INT);
+    $queryu->bindParam(':ideditorial', $ideditorial, PDO::PARAM_INT);
+    
+    $queryu->execute();
+    header("location: ../index.php");
+}
