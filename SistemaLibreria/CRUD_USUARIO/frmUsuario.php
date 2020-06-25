@@ -1,3 +1,4 @@
+<?php include '../Template/header.php';  ?>
 <?php 
 include '../Datos/conexion.php';
 include 'views/encabezado.php';
@@ -121,8 +122,8 @@ if ($cod=="") {?>
              </div>
               
           </div>         
-        <button class="btn btn-primary btn-lg" name="btnGuardar" type="submit">Registrar</button>
-	<a href="listarUsuarios.php"><input type="button" class="btn btn-danger" value="Cancelar"></a>
+        <button class="btn btn-primary" name="btnGuardar" type="submit">Registrar</button>
+	      <a href="listarUsuarios.php"><input type="button" class="btn btn-danger" value="Cancelar"></a>
       </form>
       </div>
     </div>
