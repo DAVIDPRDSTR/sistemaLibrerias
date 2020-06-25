@@ -1,3 +1,4 @@
+<?php include '../Template/header.php'?>
 <?php
 include 'views/encabezado.php';
 include '../Datos/conexion.php';
@@ -112,3 +113,4 @@ if ($cod == "") {
 <?php
 }
 ?>
+<?php include '../Template/footer.php'?>

@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 <?php 
 include '../Datos/conexion.php';
 include 'views/encabezado.php';
 @$cod=$_GET['cod'];
 if ($cod=="") {?>
+=======
+<?php include '../Template/header.php';?>
+
+
+>>>>>>> 9cebe3aaa3f11e261d088dc34626a0b2bf1724ad
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
@@ -291,6 +297,13 @@ if ($cod=="") {?>
 })();
 </script>
 
+<<<<<<< HEAD
 <?php 
 //include './Template/footer.php'; 
 ?>
+=======
+
+<?php include '../Template/footer.php';?>
+
+
+>>>>>>> 9cebe3aaa3f11e261d088dc34626a0b2bf1724ad

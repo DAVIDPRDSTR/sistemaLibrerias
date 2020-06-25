@@ -72,8 +72,9 @@ include 'views/encabezado.php';
     </div>
 <?php 
     if(@$_SESSION['msjEliminar']=='OK') { ?> 
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-danger" role="alert">
             Registro Eliminado exitosamente
+            <button type="button" class="close"  data-dismiss="alert" aria-label="Close"><span aria-hidden="true" >&times;</span></button>
         </div>
     <?php 
             $_SESSION['msjEliminar']='';
@@ -84,8 +85,9 @@ include 'views/encabezado.php';
 
 <?php 
     if(@$_SESSION['msjModificar']=='OK') { ?> 
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-warning" role="alert">
             Registro modificado exitosamente
+            <button type="button" class="close"  data-dismiss="alert" aria-label="Close"><span aria-hidden="true" >&times;</span></button>
         </div>
     <?php 
             $_SESSION['msjModificar']='';
