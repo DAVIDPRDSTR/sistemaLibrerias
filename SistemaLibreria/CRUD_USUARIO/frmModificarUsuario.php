@@ -1,3 +1,4 @@
+
 <?php
 include 'views/encabezado.php';
 include '../Datos/conexion.php';

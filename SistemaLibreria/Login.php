@@ -96,4 +96,16 @@
 	<script src="js/main.js"></script>
 
 </body>
+
+<?php
+if(isset($_GET['msj'])){
+    $msj = $_GET['msj'];
+    ?>
+    <script>
+        alert(' <?=$msj?> ');
+    </script>
+    <?php
+}
+?>
+
 </html>

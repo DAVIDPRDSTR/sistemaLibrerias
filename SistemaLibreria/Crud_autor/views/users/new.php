@@ -13,13 +13,28 @@
 	   <input type="text" class="form-control" id="nombre_autor" name="nombre_autor" autofocus placeholder="Tus nombres" required>
   </div>
   <div class="form-group">
-  	 <label for="estado">Estado</label>
-	   <input type="text" class="form-control" id="estado" name="estado" autofocus placeholder="Estado" required>
+     <label for="email">E-mail</label>
+    <input type="text" class="form-control" id="email" name="email" placeholder="Tu e-mail" required>
   </div>
   <div class="form-group">
-  	 <label for="email">E-mail</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="Tu e-mail" required>
-  </div>
+  	 <label for="id_pais">Pais</label>
+     <div >
+           <select name="id_pais" id="estado" placeholder="update Pais" value="<?php echo  $id_pais; ?>" required="" class="form-control">
+           <option value="2">EEUU</option>
+           <option value="1">ESPAÑA</option>
+           </select>
+           </div>
+           </div>
+  <div class="form-group">
+  	 <label for="estado">Estado</label>
+     <div >
+           <select name="estado" id="estado" placeholder="update estado" value="<?php echo  $estado; ?>" required="" class="form-control">
+           <option value="A">Activo</option>
+           <option value="I">Inactivo</option>
+           </select>
+           </div>
+           </div>
+  
   <div class="form-group text-center">
   	<input type="submit" name="create" value="Crear" class="btn btn-primary">
   </div>
@@ -34,7 +49,7 @@
   		}else if(isset($_GET['error'])){
   	?>
 			<div class="alert alert-danger">
-				Ha ocurrido un error al crear el usuario, por favor intente de nuevo.
+				Ha ocurrido un error al crear el usario, por favor intente de nuevo.
 			</div>
 	<?php
   		}
