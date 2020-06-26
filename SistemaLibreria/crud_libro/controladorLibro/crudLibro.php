@@ -61,3 +61,11 @@ if (isset($_POST['btnModificar']) != null) {
     $queryu->execute();
     header("location: ../index.php");
 }
+
+if(isset ($_POST['btnDescuento']) != null){
+    $descuento = $_POST['descuentoLibro'];
+    $sql = "UPDATE stocklibro SET descuento = $descuento";
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    header("location: ../../Vistas/Administrador.php");
+}

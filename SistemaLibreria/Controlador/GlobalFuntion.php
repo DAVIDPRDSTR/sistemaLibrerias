@@ -8,8 +8,10 @@ Class GlobalFunctions{
     
     public static function baseUrl(){
         
-        //return "http://".$_SERVER['Server_name']."/Libreria";
-        return "http://localhost/sistemaLibrerias/SistemaLibreria";
+        $host = $_SERVER['HTTP_HOST'];
+        $root = substr($_SERVER['REQUEST_URI'], 0, -24);
+        echo "http://$host/$root";
+        return "http://$host/$root";
     }
 
 
