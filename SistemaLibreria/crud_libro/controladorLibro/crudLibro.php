@@ -3,7 +3,7 @@
 if (isset($_POST['btnGuardar']) != null) {
     $imagen = ($_FILES['file']['tmp_name']);
     $avatar = fopen($imagen, 'rb');
-
+//Se llama a las variables
     $titulo = $_POST['titulo'];
     $edicion = $_POST['edicion'];
     $nump = $_POST['nump'];
