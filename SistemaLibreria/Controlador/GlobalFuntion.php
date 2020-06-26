@@ -19,7 +19,7 @@ Class GlobalFunctions
     {
 
         $host = $_SERVER['HTTP_HOST'];
-        $root = substr($_SERVER['REQUEST_URI'], 0, -24);
+        $root = substr($_SERVER['SCRIPT_NAME'], 0, -17);
         return "http://$host/$root";
     }
 
