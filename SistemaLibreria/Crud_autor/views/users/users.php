@@ -36,8 +36,11 @@
 				<th>Id</th>
 				<th class="text-center">Nombres</th>
 				<th class="text-center">E-mail</th>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>
+				<th class="text-center">PAIS</th>
+				<th class="text-center">Estado</th>
+				<th class="text-center">Editar</th>
+				<th class="text-center">Eliminar</th>
+				
 			</thead>
 			<tbody>
 				<?php
@@ -51,6 +54,7 @@
 								<td ><?= $value['id_autor']; ?></td>
 								<td><?= $value['nombre_autor'];?></td>
 								<td><?= $value['email']; ?></td>
+								<td ><?= $value['id_pais']; ?></td>
 								<td><?= $value['estado']; ?></td>
 								<td class="text-center">
 									<a href="./index.php?page=edit&id_autor=<?= $value['id_autor'] ?>&folder=users" title="Editar usuario: <?= $value['nombre_autor'].' '.$value['nombre_autor'] ?>">
@@ -59,7 +63,7 @@
 								</td>
 								<td class="text-center">
 									<a href="#" onclick="objUser.deleteUser(<?= $value['id_autor'] ?>)" id_autor="btnDeleteUser" title="Borrar usuario: <?= $value['nombre_autor'].' '.$value['nombre_autor'] ?>">
-										<i class="material-icons btn_delete btn-btn warning ">delete</i>
+										<i class="material-icons btn_delete  ">delete</i>
 									</a>
 								</td>
 							</tr>
